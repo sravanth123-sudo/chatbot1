@@ -1,7 +1,7 @@
 import streamlit as st
 from langchain_ollama.llms import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
-from config import CHAT_PROMPT_TEMPLATE
+#from config import CHAT_PROMPT_TEMPLATE
 import json
 
 # Title on the page
@@ -49,7 +49,7 @@ if user_input := st.chat_input("What is up?"):
     # Generate assistant response
     with st.chat_message("assistant"):
         response = chain.invoke({"question": user_input})
-        st.markdown(response)
+        st.write(response)
 
     # Add assistant response to session state
     st.session_state.messages.append({"role": "assistant", "content": response})
