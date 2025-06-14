@@ -5,12 +5,12 @@ from langchain_core.prompts import ChatPromptTemplate
 
 # Title on the page
 st.markdown(
-    "<h2 style='text-align: center; color: #4CAF50; font-family: Arial;'>Naga Sandhya🪶</h2>",
+    "<h2 style='text-align: center; color: #4CAF50; font-family: Arial;'>Sravanth🪶</h2>",
     unsafe_allow_html=True,
 )
 
 CHAT_PROMPT_TEMPLATE = """
-You are Naga Sandhya from Accenture. 
+You are Sravanth from Accenture. 
 You know everything and aim to provide a concise response.
 User: {question}
 Assistant: """
