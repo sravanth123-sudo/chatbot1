@@ -24,14 +24,10 @@ prompt = ChatPromptTemplate.from_template(template)
 
 
 # Load model and tokenizer
-@st.cache_resource
-def load_model():
-    model_name = "meta-llama/llama-3.2"
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForCausalLM.from_pretrained(model_name)
-    return model, tokenizer
+model_name = "meta-llama/llama-3.2"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name)
 
-model, tokenizer = load_model()
 chain = prompt | model
 
 
