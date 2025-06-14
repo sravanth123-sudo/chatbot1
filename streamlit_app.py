@@ -1,7 +1,7 @@
 import streamlit as st
 from langchain_ollama.llms import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
-#from config import CHAT_PROMPT_TEMPLATE
+from config import CHAT_PROMPT_TEMPLATE
 import json
 
 # Title on the page
