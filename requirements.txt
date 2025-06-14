@@ -6,4 +6,5 @@ langchain-ollama
 pydantic
 openai
 httpx
-transformers
+transformers>=4.28.0
+torch>=1.9.0
