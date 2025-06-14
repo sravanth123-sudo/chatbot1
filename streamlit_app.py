@@ -53,7 +53,3 @@ if user_input := st.chat_input("What is up?"):
 
     # Add assistant response to session state
     st.session_state.messages.append({"role": "assistant", "content": response})
-        st.write(f"Error: {e}")
-
-    st.markdown(assistant_response)
-    st.session_state.messages.append({"role": "assistant", "content": assistant_response})
