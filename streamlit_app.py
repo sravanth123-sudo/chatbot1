@@ -20,13 +20,8 @@ template = CHAT_PROMPT_TEMPLATE
 prompt = ChatPromptTemplate.from_template(template)
 
 #Load the local Llama3.2 model that we pulled using ollama
-#model = OllamaLLM(model="llama3.2")
+model = OllamaLLM(model="llama3.2")
 
-
-# Load model and tokenizer
-model_name = "meta-llama/llama-3.2"
-#tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(model_name)
 
 chain = prompt | model
 
