@@ -25,7 +25,7 @@ prompt = ChatPromptTemplate.from_template(template)
 
 # Load model and tokenizer
 model_name = "meta-llama/llama-3.2"
-tokenizer = AutoTokenizer.from_pretrained(model_name)
+#tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
 chain = prompt | model
