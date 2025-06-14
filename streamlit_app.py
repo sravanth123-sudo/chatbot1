@@ -46,11 +46,11 @@ if user_input := st.chat_input("What is up?"):
     #    response = chain.invoke({"question": user_input})
     #    st.markdown(response)
     try:
-    response = chain.invoke({"question": user_input})
-    if isinstance(response, dict) and "text" in response:
-        assistant_response = response["text"]
-    else:
-        assistant_response = "Unexpected response format."
+        response = chain.invoke({"question": user_input})
+        if isinstance(response, dict) and "text" in response:
+            assistant_response = response["text"]
+        else:
+            assistant_response = "Unexpected response format."
     except json.JSONDecodeError as e:
         assistant_response = "Error decoding JSON response."
         st.write(f"JSONDecodeError: {e}")
