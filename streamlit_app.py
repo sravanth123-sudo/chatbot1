@@ -19,7 +19,7 @@ template = CHAT_PROMPT_TEMPLATE
 prompt = ChatPromptTemplate.from_template(template)
 
 #Load the local Llama3.2 model that we pulled using ollama
-model = OllamaLLM(model="llama3.2")
+model = OllamaLLM(model="llama3.2",base_url="https://blank-app-hh8c673f4v9.streamlit.app/")
 chain = prompt | model
 
 #Initialize message history in session state
